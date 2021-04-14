@@ -1,9 +1,12 @@
-import React from 'react';
+import CharactersContainer from '../components/CharactersContainer/CharactersContainer';
 
-const Home = () => (
-    <>
-        
-    </>
-)
+const Home = () => {
+
+    return(
+        <>
+            <CharactersContainer />
+        </>
+    )
+}
 
 export default Home;
