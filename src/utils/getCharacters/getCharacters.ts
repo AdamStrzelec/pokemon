@@ -2,7 +2,7 @@
 import { authenticateUser } from '../authentication/authentication';
 import { fetchCharacters } from '../../api/fetchCharacters';
 
-export const getCharacters = async (setCharacters: any) => {
+export const getCharacters = (setCharacters: any) => {
     authenticateUser()
     .then(()=>fetchCharacters()
             .then(response => {

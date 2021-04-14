@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Navbar from '../components/Navbar/Navbar';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Home from './Home';
+import Character from './Character';
 import { userStatuses } from '../userStatus/userStatus';
 import { UserContext } from '../context/context';
 
@@ -37,7 +38,8 @@ const Root = () => {
                 }}>
                     <Navbar />
                     <Switch>
-                        <Route path="/" component={Home} />
+                        <Route exact path="/" component={Home} />
+                        <Route path="/character/:name" component={Character} />
                     </Switch>
                 </UserContext.Provider>
             </Router>

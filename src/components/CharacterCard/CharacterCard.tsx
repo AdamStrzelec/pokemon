@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 type Props = {
     name: string,
     url: string
@@ -6,9 +8,9 @@ type Props = {
 const CharacterCard: React.FC<Props> = ({ name, url }) => {
 
     return(
-        <div className="character-card">
+        <Link to={`/character/${name}`} className="character-card">
             <p>{name}</p>
-        </div>
+        </Link>
     )
 }
 
