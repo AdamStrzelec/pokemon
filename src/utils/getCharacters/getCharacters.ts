@@ -1,4 +1,3 @@
-
 import { authenticateUser } from '../authentication/authentication';
 import { fetchCharacters } from '../../api/fetchCharacters';
 

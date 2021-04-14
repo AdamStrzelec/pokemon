@@ -2,7 +2,6 @@ import React, { useState, useEffect, useContext } from 'react';
 import { withRouter } from 'react-router-dom';
 import { getCharacterByName } from '../utils/getCharacterByName/getCharacterByName';
 import { UserContext } from '../context/context';
-import { fetchCharacterByName } from '../api/fetchCharacterByName';
 
 type Props = {
     match: any
