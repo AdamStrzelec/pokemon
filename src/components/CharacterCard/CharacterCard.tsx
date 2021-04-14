@@ -1,11 +1,10 @@
 import { Link } from 'react-router-dom';
 
 type Props = {
-    name: string,
-    url: string
+    name: string
 }
 
-const CharacterCard: React.FC<Props> = ({ name, url }) => {
+const CharacterCard: React.FC<Props> = ({ name }) => {
 
     return(
         <Link to={`/character/${name}`} className="character-card">

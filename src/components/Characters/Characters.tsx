@@ -1,8 +1,7 @@
 import CharacterCard from '../CharacterCard/CharacterCard';
 
 interface Character {
-    name: string,
-    url: string,
+    name: string
 }
 
 type Props = {
@@ -15,7 +14,7 @@ const Characters: React.FC<Props> = ({ characters, searchValue }) => {
     return(
         <div className="characters-wrapper">
             {characters.filter(item => item.name.toLowerCase().includes(searchValue.toLowerCase())).map(item => 
-                <CharacterCard key={item.name} name={item.name} url={item.url} />
+                <CharacterCard key={item.name} name={item.name} />
             )}
         </div>
     )
