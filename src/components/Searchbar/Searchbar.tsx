@@ -1,5 +1,5 @@
 type Props = {
-    handleSearchValue: any
+    handleSearchValue: Function
 }
 
 const Searchbar: React.FC<Props> = ({ handleSearchValue }) => {

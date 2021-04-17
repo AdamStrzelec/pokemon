@@ -1,7 +1,7 @@
 import { authenticateUser } from '../authentication/authentication';
 import { fetchCharacters } from '../../api/fetchCharacters';
 
-export const getCharacters = (setCharacters: any) => {
+export const getCharacters = (setCharacters: Function) => {
     authenticateUser()
     .then(()=>fetchCharacters()
             .then(response => {
