@@ -3,7 +3,6 @@ import { withRouter } from 'react-router-dom';
 import { getCharacterByName } from '../utils/getCharacterByName/getCharacterByName';
 import { UserContext } from '../context/context';
 import Card from '@material-ui/core/Card';
-import CardContent from '@material-ui/core/CardContent';
 
 type Props = {
     match: any
