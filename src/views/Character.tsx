@@ -2,6 +2,8 @@ import React, { useState, useEffect, useContext } from 'react';
 import { withRouter } from 'react-router-dom';
 import { getCharacterByName } from '../utils/getCharacterByName/getCharacterByName';
 import { UserContext } from '../context/context';
+import Card from '@material-ui/core/Card';
+import CardContent from '@material-ui/core/CardContent';
 
 type Props = {
     match: any
@@ -22,15 +24,21 @@ const Character: React.FC<Props> = ({ match: { params: { name }} }) => {
         <>
             {(Object.keys(character).length>0) &&
                 <div className="character-wrapper">
-                    <p><strong>Name:</strong> {character.name}</p>
-                    <p><strong>Base experience:</strong> {character.base_experience}</p>
-                    <p><strong>Height:</strong> {character.height}</p>
+                    <Card variant="outlined">
+                        <p><strong>Name:</strong> {character.name}</p>
+                        <p><strong>Base experience:</strong> {character.base_experience}</p>
+                        <p><strong>Height:</strong> {character.height}</p>
+                    </Card>
                     <br/>
-                    <p><strong>Stats:</strong></p>
-                    {character.stats.map((item: any) => <p key={item.stat.name}>{item.stat.name + ": " + item.base_stat}</p>)}
+                    <Card variant="outlined">
+                        <p><strong>Stats:</strong></p>
+                        {character.stats.map((item: any) => <p key={item.stat.name}>{item.stat.name + ": " + item.base_stat}</p>)}
+                    </Card>
                     <br/>
-                    <p><strong>Moves:</strong></p>
-                    {character.moves.map((item: any) => <p key={item.move.name}>{item.move.name}</p>)}
+                    <Card variant="outlined">
+                        <p><strong>Moves:</strong></p>
+                        {character.moves.map((item: any) => <p key={item.move.name}>{item.move.name}</p>)}
+                    </Card>
                 </div>
             }
         </>
