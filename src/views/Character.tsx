@@ -1,14 +1,14 @@
 import React, { useState, useEffect, useContext } from 'react';
-import { withRouter } from 'react-router-dom';
+import { RouteComponentProps, withRouter } from 'react-router-dom';
 import { getCharacterByName } from '../utils/getCharacterByName/getCharacterByName';
 import { UserContext } from '../context/context';
 import Card from '@material-ui/core/Card';
 
 type Props = {
-    match: any
+    name: string
 }
 
-const Character: React.FC<Props> = ({ match: { params: { name }} }) => {
+const Character: React.FC<RouteComponentProps<Props>> = ({ match: { params: { name }} }) => {
 
     const [character, setCharacter] = useState(Object)
 
